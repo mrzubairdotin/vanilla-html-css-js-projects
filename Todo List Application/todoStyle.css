@@ -1,0 +1,166 @@
+/* Reset default styles and set global font and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Full-page container with gradient background */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    padding: 10px;
+}
+
+/* Main app box with centered layout and styling */
+.todo-app {
+    width: 100%;
+    max-width: 600px;
+    background: #f1faee;
+    margin: 100px auto;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading with color and optional icon alignment */
+.todo-app h2 {
+    color: #1d3557;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 25px;
+    margin-left: 10px;
+}
+
+/* Layout for input fields and buttons */
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styling for input fields and dropdown */
+input,select {
+    border: 2px solid #457b9d;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Make input box take full available space */
+#input-box{
+  flex: 1;
+}
+
+/* Button styling with hover effect */
+button {
+    border: none;
+    padding: 10px 20px;
+    background: #e63946;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #d62839;
+}
+
+/* Styling for task items */
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 12px 12px 50px; 
+    border: 1px solid #457b9d;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+/* Circle icon for unchecked tasks */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./images/uncheck.png);
+    background-size: cover;
+    background-position: center;
+    left: 12px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+/* Strikethrough style for completed tasks */
+ul li.checked p {
+    color: #555;
+    text-decoration: line-through; 
+}
+
+/* Change icon for checked tasks */
+ul li.checked::before {
+    background-image: url(./images/check.png);
+}
+
+/* Delete button styling */
+ul li span {
+    cursor: pointer;
+    color: #e63946;
+    font-weight: bold;
+    margin-left: auto; 
+} 
+
+/* Text wrapping within task items */  
+ul li p {
+    word-wrap: break-word;
+    max-width: calc(100% - 40px); 
+} 
+
+/* Stop animation when task is checked */
+ul li.checked.high {
+    animation: none; 
+}
+  
+/* Priority indicators with left border colors */
+ul li.low {
+    border-left: 5px solid #457b9d;
+}
+  
+ul li.medium {
+    border-left: 5px solid #f4a261;
+} 
+  
+ul li.high {
+    border-left: 5px solid #e63946;
+    animation: blink 1s infinite;
+}
+
+  
+/* Blinking background animation */
+@keyframes blink {
+    0% {
+        background-color: #ffe5e5;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ffe5e5;
+    }
+}
+
