@@ -52,23 +52,4 @@ The To-Do List Application is a lightweight, interactive, and user-friendly tool
 
 ---
 
-## Customizations
-
-- **Change Priority Colors:** Modify the priority styles in `todoStyle.css` to match your preferences.
-- **Add New Features:** Consider adding:
-  - A search bar to filter tasks.
-  - Categories for grouping tasks.
-  - A deadline tracker with calendar integration.
-
----
-
-## Future Improvements
-
-- Include user authentication for managing tasks across devices.
-- Add dark mode for better accessibility.
-- Extend the application with task reminders and notifications.
-
-
----
-
 Enjoy managing your tasks with the To-Do List Application! 🎉
